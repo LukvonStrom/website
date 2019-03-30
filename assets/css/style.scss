@@ -1,1 +1,174 @@
 @import "includes/reset";
+@import "includes/variables";
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: $white;
+  letter-spacing: 0.025em;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.2;
+}
+
+p {
+  color: $lightgray;
+  max-width: 534px;
+  line-height: 1.5rem;
+  margin: 0.2em 0 0.4em 0;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0.2em 0 0.4em 0;
+}
+
+h2 {
+  font-size: 1.7rem;
+  margin: 0.2em 0 0.4em 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 0.2em 0 0.4em 0;
+}
+
+h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: $darkgray;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0.2em 0 0.4em 0;
+}
+
+.container {
+  max-width: 1110px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+nav#nav {
+  width: 100%;
+  padding-top: 5rem;
+  background: $dark-background;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 0.6rem;
+    background: $orange;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    ul.menu li {
+      display: inline-block;
+      color: $lightgray;
+      margin-left: 1rem;
+
+      a {
+        &:hover {
+          color: $white;
+        }
+
+        &.active {
+          color: $white;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+header#header {
+  padding: 9rem 0;
+  background: $dark-background;
+
+  div.skills {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 1rem;
+    }
+  }
+}
+
+main#main {
+  background-color: $light-background;
+  padding: 7rem 0;
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+
+    @media (max-width: 530px) {
+      display: block;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0rem;
+    }
+
+    header.label {
+      flex-basis: 192px;
+      margin-bottom: 1rem;
+    }
+
+    main {
+      flex: 1;
+
+      ul.flex {
+        display: flex;
+        flex-wrap: wrap;
+
+        li.item {
+          flex: 1;
+          flex-basis: 246px;
+          margin-right: 42px;
+          max-width: 246px;
+          margin-bottom: 1.2rem;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer#footer {
+  background-color: $light-background;
+  padding-bottom: 5rem;
+
+  section.social {
+    i.fas,
+    i.fab {
+      color: $orange;
+      font-size: 1.5rem;
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+  }
+
+  section.legal {
+    margin-top: 1rem;
+
+    a {
+      @extend h4;
+
+      &:hover {
+        color: $lightgray;
+      }
+    }
+  }
+}
