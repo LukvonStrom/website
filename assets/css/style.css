@@ -166,7 +166,7 @@ p {
   color: #a1a4a8;
   max-width: 534px;
   line-height: 1.5rem;
-  margin: 0.2em 0 0.4em 0;
+  margin: 0.2em 0 1em 0;
 }
 
 h1 {
@@ -197,7 +197,7 @@ footer#footer section.legal a {
 
 .container {
   max-width: 1110px;
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -207,7 +207,11 @@ nav#nav {
   background: #161c27;
 }
 
-nav#nav:before {
+nav#nav.no-accent-color {
+  padding-bottom: 4em;
+}
+
+nav#nav:not(.no-accent-color):before {
   position: absolute;
   top: 0;
   content: "";
@@ -223,6 +227,9 @@ nav#nav .container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav#nav .container ul.menu li {
@@ -327,7 +334,7 @@ footer#footer section.social i.fab {
   color: #f5734d;
   font-size: 1.5rem;
   display: inline-block;
-  margin-right: 0.5rem;
+  margin-right: 0.8rem;
 }
 
 footer#footer section.legal {
