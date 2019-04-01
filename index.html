@@ -66,10 +66,10 @@
             <a href="/" class="active">Home</a>
           </li>
           <li>
-            <a href="#about-me">About Me</a>
+              <a data-scroll href="#about-me">About Me</a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+              <a data-scroll href="#projects">Projects</a>
           </li>
         </ul>
       </div>
@@ -135,7 +135,12 @@
         </section>
       </div>
     </footer>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/smoothscroll.js"></script>
+      <script src="assets/js/smooth-scroll.polyfills.min.js"></script>
+      <script>
+          var scroll = new SmoothScroll('a[href*="#"]', {
+              speed : 800,
+              speedAsDuration : true
+          });
+      </script>
   </body>
 </html>
