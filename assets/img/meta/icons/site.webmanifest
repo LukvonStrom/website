@@ -1,6 +1,6 @@
 {
-    "name": "Lukas Frunkte",
-    "short_name": "Lukas Frunkte",
+    "name": "Lukas Fruntke",
+    "short_name": "Lukas Fruntke",
     "icons": [
         {
             "src": "/assets/img/meta/android-chrome-192x192.png",
@@ -13,6 +13,6 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "161c27",
-    "background_color": "161c27"
+    "theme_color": "#161c27",
+    "background_color": "#161c27"
 }
