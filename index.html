@@ -50,12 +50,6 @@
     <!--  Stylesheets -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
   </head>
   <body>
     <nav id="nav">
@@ -63,13 +57,13 @@
         <h2>Lukas Fruntke</h2>
         <ul class="menu">
           <li>
-            <a href="/" class="active">Home</a>
+              <a aria-label="Get to the Root of the Page" class="active" href="/">Home</a>
           </li>
           <li>
-              <a data-scroll href="#about-me">About Me</a>
+              <a aria-label="Learn more about me" data-scroll href="#about-me">About Me</a>
           </li>
           <li>
-              <a data-scroll href="#projects">Projects</a>
+              <a aria-label="Learn more about my projects." data-scroll href="#projects">Projects</a>
           </li>
         </ul>
       </div>
@@ -107,15 +101,15 @@
           <main>
             <ul class="flex">
               <li class="item">
-                  <h3><a href="https://github.com/LukvonStrom/Amethyst" target="_blank">Amethyst</h3></a>
+                  <h3><a href="https://github.com/LukvonStrom/Amethyst" rel="noopener" target="_blank">Amethyst</h3></a>
                 <p>Amethyst is a simple shop software designed especially for artists and aspiring designers.</p>
               </li>
               <li class="item">
-                  <h3><a href="https://github.com/LukvonStrom/absence" target="_blank">Absence</h3></a>
+                  <h3><a href="https://github.com/LukvonStrom/absence" rel="noopener" target="_blank">Absence</h3></a>
                   <p>Absence is a software for schools to track Absentees, the affected lessons and the overall missing hours</p>
               </li>
               <li class="item">
-                  <h3><a href="https://github.com/dsgnhb/api" target="_blank">designhub API</h3></a>
+                  <h3><a href="https://github.com/dsgnhb/api" rel="noopener" target="_blank">designhub API</h3></a>
                   <p>The designhub API is a pretty simple HTTP-API to support common tasks at the designhub Discord.</p>
               </li>
             </ul>
@@ -126,9 +120,9 @@
     <footer id="footer">
       <div class="container">
         <section class="social">
-            <a href="mailto:lukas@fruntke.tech"><i class="fas fa-envelope"></i></a>
-          <a target="_blank" href="https://github.com/lukvonstrom"><i class="fab fa-github"></i></a>
-          <a target="_blank" href="https://twitter.com/lukvonstrom"><i class="fab fa-twitter"></i></a>
+            <a aria-label="My Email Adress" href="mailto:lukas@fruntke.tech"><i class="fas fa-envelope"></i></a>
+            <a aria-label="My Github Profile" href="https://github.com/lukvonstrom" rel="noopener" target="_blank"><i class="fab fa-github"></i></a>
+            <a aria-label="My Twitter Profile" href="https://twitter.com/lukvonstrom" rel="noopener" target="_blank"><i class="fab fa-twitter"></i></a>
         </section>
         <section class="legal">
             <a href="legal.html">Imprint / Privacy Policy</a>
@@ -170,5 +164,6 @@
               });
           }
       </script>
+      <script crossorigin="anonymous" defer integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"></script>
   </body>
 </html>

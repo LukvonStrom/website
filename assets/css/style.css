@@ -206,6 +206,12 @@ nav#nav {
   padding-top: 5rem;
   background: #161c27;
 }
+
+@media only screen and (max-width: 768px) {
+    nav#nav {
+        padding-top: 2rem;
+    }
+}
 nav#nav.no-accent-color {
   padding-bottom: 4em;
 }
@@ -266,7 +272,7 @@ main#main section {
   }
 }
 main#main section:last-of-type {
-  margin-bottom: 0rem;
+    margin-bottom: 0;
 }
 main#main section header.label {
     flex-basis: 192px;
