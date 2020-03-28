@@ -132,28 +132,22 @@
           });
 
           if ('serviceWorker' in navigator) {
-              window.addEventListener('load', function () {
-                  navigator.serviceWorker.register('service-worker.js').then(function (reg) {
-                      reg.onupdatefound = function () {
-                          var installingWorker = reg.installing;
-
-                          installingWorker.onstatechange = function () {
-                              switch (installingWorker.state) {
-                                  case 'installed':
-                                      if (navigator.serviceWorker.controller) {
-                                          console.log('New or updated content is available.');
-                                      } else {
-                                          console.log('Content is now available offline!');
-                                      }
-                                      break;
-
-                                  case 'redundant':
-                                      console.error('The installing service worker became redundant.');
-                                      break;
-                              }
-                          };
-                      };
-                  }).catch(function (e) {
+            navigator.serviceWorker.getRegistrations().then(workers => {
+              if(workers){
+                workers.forEach(worker => {
+                  if(worker && worker.active && worker.active.scriptURL === "https://fruntke.tech/service-worker.js"){
+                    worker.unregister().then(()=>self.clients.matchAll())
+                            .then(clients =>
+                                    clients.forEach(client =>
+                                            client.url && "navigate" in client && client.navigate(client.url)
+                                    )
+                            );
+                  }
+                })
+              }
+            });
+              window.addEventListener('load', () => {
+                  navigator.serviceWorker.register('sw.js').catch((e) => {
                       console.error('Error during service worker registration:', e);
                   });
               });
