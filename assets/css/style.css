@@ -201,16 +201,24 @@ h4, footer#footer section.legal a {
   margin: 0 auto;
 }
 
+.padding-y-20 {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.heading {
+  color: #f5734d;
+}
+
 nav#nav {
   width: 100%;
   padding-top: 5rem;
   background: #161c27;
 }
-
 @media only screen and (max-width: 768px) {
-    nav#nav {
-        padding-top: 2rem;
-    }
+  nav#nav {
+    padding-top: 2rem;
+  }
 }
 nav#nav.no-accent-color {
   padding-bottom: 4em;
@@ -225,8 +233,8 @@ nav#nav:not(.no-accent-color):before {
 }
 nav#nav .container {
   display: flex;
-    justify-content: space-between;
-    align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 nav#nav .container ul.menu li {
   display: inline-block;
@@ -247,23 +255,22 @@ header#header {
 }
 header#header div.skills {
   display: flex;
-    align-items: center;
+  align-items: center;
 }
-header#header div.skills img {
+header#header div.skills img, header#header div.skills svg.svg-inline--fa {
+  color: white;
   margin-right: 1rem;
-}
-header#header div.skills .nest-logo {
-  width: 49px;
   height: 30px;
+  width: auto;
 }
 
 main#main {
   background-color: #212732;
-  padding: 7rem 0;
+  padding: 2rem 0;
 }
 main#main section {
   display: flex;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-bottom: 4rem;
 }
 @media (max-width: 530px) {
@@ -272,25 +279,31 @@ main#main section {
   }
 }
 main#main section:last-of-type {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 main#main section header.label {
-    flex-basis: 192px;
+  flex-basis: 192px;
   margin-bottom: 1rem;
 }
 main#main section main {
-    flex: 1;
+  flex: 1;
 }
 main#main section main ul.flex {
   display: flex;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 main#main section main ul.flex li.item {
-    flex: 1;
-    flex-basis: 246px;
+  flex: 1;
+  flex-basis: 246px;
   margin-right: 42px;
   max-width: 246px;
   margin-bottom: 1.2rem;
+}
+main#main section main ul.flex li.item .aws-badge {
+  height: 13rem;
+  width: 13rem;
+  background: white;
+  border-radius: 10%;
 }
 main#main section main ul.flex li.item:last-of-type {
   margin-bottom: 0;
@@ -298,12 +311,11 @@ main#main section main ul.flex li.item:last-of-type {
 
 footer#footer {
   background-color: #212732;
-  padding-bottom: 5rem;
+  padding: 2rem 0;
 }
-footer#footer section.social i.fas,
-footer#footer section.social i.fab {
+footer#footer section.social svg.svg-inline--fa {
   color: #f5734d;
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: inline-block;
   margin-right: 0.8rem;
 }

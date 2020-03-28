@@ -55,6 +55,15 @@ h4 {
   margin: 0 auto;
 }
 
+.padding-y-20 {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.heading{
+  color: $orange;
+}
+
 nav#nav {
   width: 100%;
   padding-top: 5rem;
@@ -105,25 +114,26 @@ header#header {
   padding: 9rem 0;
   background: $dark-background;
 
+
   div.skills {
     display: flex;
     align-items: center;
 
-    img {
+
+    img,svg.svg-inline--fa {
+      color: white;
       margin-right: 1rem;
+      height:30px;
+      width:auto;
     }
 
-    .nest-logo {
-      width: 49px;
-      height: 30px;
-      // lol
-    }
   }
 }
 
 main#main {
   background-color: $light-background;
-  padding: 7rem 0;
+  // padding: 7rem 0;
+  padding: 2rem 0;
 
   section {
     display: flex;
@@ -157,6 +167,13 @@ main#main {
           max-width: 246px;
           margin-bottom: 1.2rem;
 
+          .aws-badge {
+            height: 13rem;
+            width: 13rem;
+            background: white;
+            border-radius: 10%;
+          }
+
           &:last-of-type {
             margin-bottom: 0;
           }
@@ -168,13 +185,13 @@ main#main {
 
 footer#footer {
   background-color: $light-background;
-  padding-bottom: 5rem;
+  //padding-bottom: 5rem;
+  padding: 2rem 0;
 
   section.social {
-    i.fas,
-    i.fab {
+    svg.svg-inline--fa {
       color: $orange;
-      font-size: 1.5rem;
+      font-size: 2rem;
       display: inline-block;
       margin-right: 0.8rem;
     }
@@ -192,3 +209,4 @@ footer#footer {
     }
   }
 }
+
